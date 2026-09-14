@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>UN
+Anniversaire
+...</title>
+    <meta name="description" content="A cinematic 3D heart tunnel anniversary reveal experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cinzel+Decorative:wght@700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Dancing+Script:wght@600;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+    <div id="start-overlay">
+        <div class="start-card">
+            <div class="start-heart">💖</div>
+            <h1 class="start-title">
+                <span class="start-title-sub">Joyeux</span>
+                <span class="start-title-main">anniversaire Aaron 💕</span>
+            </h1>
+            <p class="start-subtitle">Une surprise spéciale pour toi</p>
+            <button id="start-btn" class="glow-btn">
+                <span class="btn-icon"></span> Appuyez pour ouvrir la surprise <span class="btn-icon"></span>
+            </button>
+            <p class="start-hint">🔊 Activez le son pour une expérience optimale.</p>
+        </div>
+    </div>
+
+    
+    <canvas id="tunnel-canvas"></canvas>
+
+    
+    <div id="cinematic-text">
+        <span class="sub-line">✦ NOTRE PARCOURS ✦</span>
+        <span class="main-line">Notre belle amitié</span>
+    </div>
+
+    
+    <div id="flash-overlay"></div>
+
+    
+    <div id="reveal">
+        <canvas id="ambient-canvas"></canvas>
+
+        <div class="reveal-content">
+            <div class="reveal-card">
+
+                <div class="reveal-item sparkle-row top">
+                    <span>✦</span><span>·</span><span>✧</span><span>·</span><span>✦</span>
+                </div>
+
+                <h1 class="reveal-item reveal-title" id="display-title">Heureux<br>Anniversaire</h1>
+
+                <p class="reveal-item reveal-couple-name" id="display-couple">Aaron💕</p>
+
+                <div class="reveal-item ornament">
+                    <span class="orn-line"></span>
+                    <span class="orn-diamond">◆</span>
+                    <span class="orn-line"></span>
+                </div>
+
+                
+                <div class="reveal-item polaroid-wrapper">
+                    <div class="polaroid-frame" id="polaroid-box">
+                        <div class="photo-placeholder">
+                            <img id="couple-photo"
+                                src="Aaron.jpeg"
+                                alt="Our Moment" />
+                            <div class="photo-overlay-btn" id="photo-upload-trigger">
+                                <span>📷 Appuyez pour changer la photo</span>
+                            </div>
+                        </div>
+                        <p class="polaroid-caption" id="display-caption">Ma CP chinoise préférée 💕</p>
+                    </div>
+                    <input type="file" id="photo-file-input" accept="image/*" style="display:none;">
+                </div>
+
+                
+                <div class="reveal-item big-heart-wrap">
+                    <div class="heart-ring">
+                        <span>♥</span><span>♥</span><span>♥</span><span>♥</span>
+                        <span>♥</span><span>♥</span><span>♥</span><span>♥</span>
+                    </div>
+                    <div class="big-heart">❤</div>
+                    <div class="heart-glow"></div>
+                </div>
+
+                <p class="reveal-item reveal-subtitle" id="display-subtitle">À ta magnifique journée</p>
+
+                <div class="reveal-item years-badge">
+                    <span class="years-number" id="display-years">22</span>
+                    <span class="years-text" id="display-years-unit">ans</span>
+                </div>
+
+                <blockquote class="reveal-item reveal-quote" id="display-quote">
+                    "La distance ne compte pas entre deux cœurs<br>qui se racontent tout, jour après jour."
+                </blockquote>
+
+                <p class="reveal-item reveal-date" id="display-date">~ 15 Septembre, 2026 ~</p>
+
+                
+                <div class="reveal-item letter-btn-wrapper">
+                    <button class="glow-btn letter-open-btn" id="open-letter-btn">
+                        <span class="letter-icon">💌</span> Ouvrir ma lettre <span class="letter-icon">💌</span>
+                    </button>
+                </div>
+
+                <div class="reveal-item sparkle-row bottom">
+                    <span>✧</span><span>·</span><span>♥</span><span>·</span><span>✧</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <canvas id="petals-canvas"></canvas>
+
+    
+    <div id="letter-modal" class="letter-modal-overlay">
+        <div class="letter-card">
+            <button class="letter-close-btn" id="letter-close-btn">&times;</button>
+            <div class="letter-envelope-seal">💌</div>
+            <h2 class="letter-title">Ma CP chinoise ,</h2>
+            <div class="letter-divider">❖ ─── ✦ ─── ❖</div>
+            <div class="letter-body">
+                <p>Joyeux anniversaire à celle qui, même à des milliers de kilomètres et plusieurs fuseaux horaires de distance, reste l'une des personnes les plus proches de mon cœur.</p>
+                <p>Depuis qu'on se connaît, on s'est tout raconté : nos joies, nos peines, nos journées banales et nos grandes nouvelles. Peu importe l'heure qu'il est chez toi ou chez moi, il y a toujours de la place pour un message, une blague ou une oreille attentive.</p>
+                <p>Merci d'être cette amie fidèle, drôle et sincère, celle sur qui je sais pouvoir compter même quand un océan entier nous sépare.</p>
+                <p class="letter-highlight">À notre amitié sans frontières, et à encore plein d'histoires à se raconter ! 🥂💖</p>
+            </div>
+            <div class="letter-signature">
+                <p class="sig-text">Avec toute mon affection,</p>
+                <p class="sig-name" id="letter-sig-name">Ta correspondante qui pense à toi 💕</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="toast-msg">Lien copié dans le presse-papiers ! 💖</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
